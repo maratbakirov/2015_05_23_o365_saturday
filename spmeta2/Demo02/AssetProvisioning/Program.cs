@@ -10,6 +10,7 @@ using Model.CSOM;
 using SPMeta2.CSOM.ModelHosts;
 using SPMeta2.CSOM.Services;
 using SPMeta2.CSOM.Standard.ModelHandlers.Taxonomy;
+using SPMeta2.CSOM.Standard.Services;
 
 namespace AssetProvisioning
 {
@@ -26,10 +27,10 @@ namespace AssetProvisioning
                 {
                     TraceHelper.TraceInformation("Configuring managed metadata");
 
-                    var provisioningService = new CSOMProvisionService();
+                    var provisioningService = new StandardCSOMProvisionService();
                     var siteModel = SiteModel.BuildTaxonomyModel();
 
-                    provisioningService.RegisterModelHandlers(typeof(TaxonomyGroupModelHandler).Assembly);
+                    //provisioningService.RegisterModelHandlers(typeof(TaxonomyGroupModelHandler).Assembly);
                     provisioningService.DeployModel(SiteModelHost.FromClientContext(ctx), siteModel);
                 }
                 using (ClientContext ctx = GetAuthenticatedContext())
