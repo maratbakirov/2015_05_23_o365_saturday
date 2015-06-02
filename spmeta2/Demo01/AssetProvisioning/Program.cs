@@ -22,8 +22,8 @@ namespace AssetProvisioning
         {
             Name = "TestSecurityGroup",
             AllowMembersEditMembership = true,
-            //AllowRequestToJoinLeave = false,
-            AllowRequestToJoinLeave = true,
+            AllowRequestToJoinLeave = false,
+            //AllowRequestToJoinLeave = true,
             Description = "test gropup"
         };
 

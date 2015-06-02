@@ -41,8 +41,8 @@ namespace Model
         };
         public static TaxonomyTermDefinition SubTerm2 = new TaxonomyTermDefinition
         {
-            Name = "SubTerm2",
-            Id = new Guid("{CF3A616F-5F66-4DA7-8B28-A53581748CB0}"),
+            Name = "SubTerm1.1",
+            Id = new Guid("{643BBA8E-2404-4352-994B-A111F01EEBB7}"),
             LCID = 1033
         };
 

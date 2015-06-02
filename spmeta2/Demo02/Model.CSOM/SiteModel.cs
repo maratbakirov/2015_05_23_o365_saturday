@@ -33,8 +33,13 @@ namespace Model.CSOM
                                             termSet.AddTaxonomyTerm(Taxonomy.RootTerm,
                                                 term =>
                                                 {
-                                                    //term.AddTaxonomyTerm(Taxonomy.SubTerm1);
-                                                    //term.AddTaxonomyTerm(Taxonomy.SubTerm2);
+                                                    term.AddTaxonomyTerm(Taxonomy.SubTerm1,
+                                                        term1 =>
+                                                        {
+
+                                                            term1.AddTaxonomyTerm(Taxonomy.SubTerm2);
+                                                        }
+                                                    );
                                                 }
                                                 );
                                         });
