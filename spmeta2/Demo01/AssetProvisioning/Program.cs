@@ -6,6 +6,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.SharePoint.Client;
+using SPMeta2.BuiltInDefinitions;
 using SPMeta2.CSOM.ModelHosts;
 using SPMeta2.CSOM.Services;
 using SPMeta2.Definitions;
@@ -25,13 +26,12 @@ namespace AssetProvisioning
             AllowMembersEditMembership = true,
             AllowRequestToJoinLeave = false,
             //AllowRequestToJoinLeave = true,
-            Description = "test gropup"
+            Description = "test group",
         };
 
         public static ModelNode BuildSiteModel()
         {
             var siteModel = SPMeta2Model.NewSiteModel(
-
                 site =>
                 {
                     site.AddSecurityGroup(testSecurityGroup);
