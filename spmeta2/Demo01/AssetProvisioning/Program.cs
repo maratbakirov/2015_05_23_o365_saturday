@@ -21,6 +21,7 @@ namespace AssetProvisioning
         public static SecurityGroupDefinition testSecurityGroup = new SecurityGroupDefinition()
         {
             Name = "TestSecurityGroup",
+            Owner = "TestSecurityGroup",
             AllowMembersEditMembership = true,
             AllowRequestToJoinLeave = false,
             //AllowRequestToJoinLeave = true,
